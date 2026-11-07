@@ -1,0 +1,12 @@
+[package]
+name = "dcn-v2"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+burn = { version = "0.22", features = ["flex", "train"] } 
+csv = "1.4.0"
+serde = { version = "1.0.229", features = ["derive"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+burn = { version = "0.22", features = ["wgpu", "flex", "train"] } 
